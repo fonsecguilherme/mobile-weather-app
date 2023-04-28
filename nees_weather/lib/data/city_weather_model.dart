@@ -1,7 +1,3 @@
-// To parse this JSON data, do
-//
-//     final cityWeatherModel = cityWeatherModelFromMap(jsonString);
-
 import 'dart:convert';
 
 import 'package:intl/intl.dart';
@@ -41,6 +37,7 @@ class Results {
   String cityName;
   String sunrise;
   String sunset;
+  String currently;
   List<Forecast> forecast;
 
   Results({
@@ -56,6 +53,7 @@ class Results {
     required this.cityName,
     required this.sunrise,
     required this.sunset,
+    required this.currently,
     required this.forecast,
   });
 
@@ -81,6 +79,7 @@ class Results {
       cityName: json["city_name"],
       sunrise: json["sunrise"],
       sunset: json["sunset"],
+      currently: json["currently"],
       forecast:
           List<Forecast>.from(json["forecast"].map((x) => Forecast.fromMap(x))),
     );
@@ -100,6 +99,7 @@ class Results {
         "city_name": cityName,
         "sunrise": sunrise,
         "sunset": sunset,
+        "currently": currently,
         "forecast": List<dynamic>.from(forecast.map((x) => x.toMap())),
       };
 }
