@@ -47,10 +47,10 @@ class _HomeScreene extends State<HomeScreen> {
   Widget _body(AsyncSnapshot<CityWeatherModel> snapshot) {
     Results value = snapshot.data!.results;
     return Scaffold(
-      backgroundColor: AppColors.backgroundBlue,
+      backgroundColor: _backgroundColorSelector(value),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: AppBarWidget(cityName: value.cityName),
+        child: AppBarWidget(values: value),
       ),
       body: ListView(
         children: [
@@ -64,5 +64,13 @@ class _HomeScreene extends State<HomeScreen> {
         ],
       ),
     );
+  }
+
+  Color _backgroundColorSelector(Results value) {
+    if (value.currently == 'dia') {
+      return AppColors.backgroundBlue;
+    } else {
+      return AppColors.backgroundDarkBlue;
+    }
   }
 }
