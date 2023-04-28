@@ -39,6 +39,8 @@ class Results {
   double rain;
   String windSpeedy;
   String cityName;
+  String sunrise;
+  String sunset;
   List<Forecast> forecast;
 
   Results({
@@ -52,6 +54,8 @@ class Results {
     required this.rain,
     required this.windSpeedy,
     required this.cityName,
+    required this.sunrise,
+    required this.sunset,
     required this.forecast,
   });
 
@@ -75,6 +79,8 @@ class Results {
       rain: json["rain"],
       windSpeedy: json["wind_speedy"],
       cityName: json["city_name"],
+      sunrise: json["sunrise"],
+      sunset: json["sunset"],
       forecast:
           List<Forecast>.from(json["forecast"].map((x) => Forecast.fromMap(x))),
     );
@@ -92,6 +98,8 @@ class Results {
         "rain": rain,
         "wind_speedy": windSpeedy,
         "city_name": cityName,
+        "sunrise": sunrise,
+        "sunset": sunset,
         "forecast": List<dynamic>.from(forecast.map((x) => x.toMap())),
       };
 }
