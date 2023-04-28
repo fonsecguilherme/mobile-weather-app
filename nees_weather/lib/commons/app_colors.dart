@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const backGroundBlue = Color(0xFF47BBE1);
-  static const backGroundGradient = LinearGradient(
+  static const backgroundBlue = Color(0xFF47BBE1);
+  static const backgroundGradient = LinearGradient(
     begin: Alignment.bottomRight,
     end: Alignment.topLeft,
     colors: [
@@ -11,5 +11,7 @@ class AppColors {
       Color(0xFF08244F),
     ],
   );
+  static const backgroundDarkBlue = Color(0xFF134CB5);
   static const white = Colors.white;
+  static const black = Colors.black; 
 }
