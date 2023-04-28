@@ -49,7 +49,10 @@ class SmallInfoWidget extends StatelessWidget {
             Image.asset(imagePath),
             Text(
               value,
-              style: const TextStyle(color: AppColors.white, fontSize: 16),
+              style: const TextStyle(
+                color: AppColors.white,
+                fontSize: 16,
+              ),
             ),
           ],
         ),
