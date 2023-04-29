@@ -4,4 +4,5 @@ class AppStrings {
   static const String sunrise = 'Nascer do sol';
   static const String sunset = 'Pôr do sol';
   static const String time = 'Hora da atualização ';
+  static const String windDirection = 'Direção do vento';
 }
