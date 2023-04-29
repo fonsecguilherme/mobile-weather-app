@@ -38,6 +38,7 @@ class Results {
   String sunrise;
   String sunset;
   String currently;
+  int windDirection;
   List<Forecast> forecast;
 
   Results({
@@ -54,6 +55,7 @@ class Results {
     required this.sunrise,
     required this.sunset,
     required this.currently,
+    required this.windDirection,
     required this.forecast,
   });
 
@@ -80,6 +82,7 @@ class Results {
       sunrise: json["sunrise"],
       sunset: json["sunset"],
       currently: json["currently"],
+      windDirection: json["wind_direction"],
       forecast:
           List<Forecast>.from(json["forecast"].map((x) => Forecast.fromMap(x))),
     );
@@ -100,6 +103,7 @@ class Results {
         "sunrise": sunrise,
         "sunset": sunset,
         "currently": currently,
+        "wind_direction": windDirection,
         "forecast": List<dynamic>.from(forecast.map((x) => x.toMap())),
       };
 }
