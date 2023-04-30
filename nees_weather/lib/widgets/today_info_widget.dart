@@ -15,7 +15,11 @@ class TodayInfoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 16, left: 48, right: 48),
+      padding: const EdgeInsets.only(
+        top: 16,
+        left: 48,
+        right: 48,
+      ),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(
@@ -52,7 +56,11 @@ class TodayInfoWidget extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 24, right: 24, top: 8, bottom: 20),
+                left: 24,
+                right: 24,
+                top: 8,
+                bottom: 20,
+              ),
               child: SizedBox(
                   child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
