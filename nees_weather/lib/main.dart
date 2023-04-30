@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'NEES Weather',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Roboto'),
       initialRoute: '/',
       routes: {
         '/': (context) => const HomeScreen(),
