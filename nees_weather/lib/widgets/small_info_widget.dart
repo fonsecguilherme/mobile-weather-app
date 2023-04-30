@@ -13,8 +13,9 @@ class SmallInfoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 8, left: 48, right: 48),
+      padding: const EdgeInsets.only(top: 30, left: 48, right: 48),
       child: Container(
+        height: 47,
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(
             Radius.circular(20),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nees_weather/commons/app_colors.dart';
 import 'package:nees_weather/data/city_weather_model.dart';
 import 'package:nees_weather/helpers/functions.dart';
 
@@ -14,31 +15,33 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.transparent,
+      backgroundColor: AppColors.appBarTransparent,
       elevation: 0,
       leading: const Icon(Icons.location_on_outlined),
       title: DropdownButtonHideUnderline(
         child: DropdownButton(
           dropdownColor: Functions.dropDownBackgroundColor(values),
-          iconEnabledColor: Colors.white,
+          iconEnabledColor: AppColors.white,
           items: [
             DropdownMenuItem(
               value: values.cityName,
               child: Text(
                 values.cityName,
+                style: const TextStyle(fontWeight: FontWeight.normal),
               ),
             ),
             const DropdownMenuItem(
               value: 'Maceió',
               child: Text(
                 'Maceió',
+                style: TextStyle(fontWeight: FontWeight.normal),
               ),
             ),
           ],
           value: values.cityName,
           onChanged: (val) {},
           style: const TextStyle(
-            color: Colors.white,
+            color: AppColors.white,
             fontSize: 18,
           ),
         ),

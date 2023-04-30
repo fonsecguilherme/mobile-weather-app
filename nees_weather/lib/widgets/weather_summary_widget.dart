@@ -22,7 +22,7 @@ class WeatherSummaryWidget extends StatelessWidget {
               child: Image.asset('assets/images/header_photos/sunny.png'),
             ),
             Text(
-              value.temp.toString(),
+              '${value.temp}°',
               style: const TextStyle(
                 fontSize: 48,
                 color: AppColors.white,
@@ -32,17 +32,15 @@ class WeatherSummaryWidget extends StatelessWidget {
             Text(
               value.description,
               style: const TextStyle(
-                fontSize: 24,
+                fontSize: 18,
                 color: AppColors.white,
-                fontWeight: FontWeight.normal,
               ),
             ),
             Text(
-              'Max.:${forecast.first.max}  Min.:${forecast.first.min}',
+              'Max.:${forecast.first.max}°  Min.:${forecast.first.min}°',
               style: const TextStyle(
-                fontSize: 24,
+                fontSize: 18,
                 color: AppColors.white,
-                fontWeight: FontWeight.normal,
               ),
             ),
           ],
