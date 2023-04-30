@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nees_weather/data/city_weather_model.dart';
 import 'package:nees_weather/data/weather_api_repository.dart';
 import 'package:nees_weather/helpers/functions.dart';
+import 'package:nees_weather/screens/error_screen.dart';
 import 'package:nees_weather/widgets/app_bar.dart';
 import 'package:nees_weather/widgets/next_forecast_widget.dart';
 import 'package:nees_weather/widgets/small_info_widget.dart';
@@ -34,9 +35,7 @@ class _HomeScreene extends State<HomeScreen> {
             if (snapshot.hasData) {
               return _body(snapshot);
             } else if (snapshot.hasError) {
-              return const Center(
-                child: Text('Temos erro'),
-              );
+              return const ErrorScreen();
             } else {
               return const CircularProgressIndicator();
             }
