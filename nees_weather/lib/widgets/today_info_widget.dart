@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:nees_weather/commons/app_colors.dart';
 import 'package:nees_weather/commons/app_strings.dart';
 import 'package:nees_weather/data/city_weather_model.dart';
+import 'package:nees_weather/helpers/functions.dart';
 
 class TodayInfoWidget extends StatelessWidget {
   final Results value;
@@ -40,7 +40,7 @@ class TodayInfoWidget extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    _formattedDate(value.date),
+                    Functions.formattedDate(value.date),
                     style: const TextStyle(
                       fontSize: 20,
                       color: AppColors.white,
@@ -60,6 +60,8 @@ class TodayInfoWidget extends StatelessWidget {
                 children: [
                   _todayInformation(AppStrings.sunrise, value.sunrise),
                   _todayInformation(AppStrings.sunset, value.sunset),
+                  _todayInformation(AppStrings.windDirection,
+                      Functions.windDirectionConversion(value.windDirection)),
                   _todayInformation(AppStrings.time, value.time),
                 ],
               )),
@@ -94,10 +96,4 @@ class TodayInfoWidget extends StatelessWidget {
         fontSize: 16,
         fontWeight: FontWeight.normal,
       );
-
-  String _formattedDate(DateTime date) {
-    final DateFormat formatter = DateFormat.MMMd();
-    final String formatted = formatter.format(date);
-    return formatted;
-  }
 }
