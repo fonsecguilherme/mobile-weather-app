@@ -41,12 +41,11 @@ class Functions {
     }
   }
 
-   static Color backgroundColorSelector(Results value) {
+  static Color backgroundColorSelector(Results value) {
     if (value.currently == 'dia') {
       return AppColors.backgroundBlue;
     } else {
       return AppColors.backgroundDarkBlue;
     }
   }
-
 }
