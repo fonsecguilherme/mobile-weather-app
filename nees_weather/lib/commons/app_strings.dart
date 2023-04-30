@@ -5,6 +5,8 @@ class AppStrings {
   static const String sunset = 'Pôr do sol';
   static const String time = 'Hora da atualização ';
   static const String windDirection = 'Direção do vento';
+  static const String errorMessage =
+      'Ops!\nParece que ouve um erro. Recarregue a página.';
   static const String north = 'Norte';
   static const String south = 'Sul';
   static const String east = 'Leste';
@@ -13,5 +15,4 @@ class AppStrings {
   static const String northwest = 'Noroeste';
   static const String southeast = 'Sudeste';
   static const String southwest = 'Sudoeste';
-  
 }
