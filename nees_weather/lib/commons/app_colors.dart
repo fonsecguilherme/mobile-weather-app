@@ -16,4 +16,5 @@ class AppColors {
   static const black = Colors.black;
   static const dropdownButtonLight = Color.fromARGB(255, 57, 151, 182);
   static const dropdownButtonDark = Color(0xFF08244F);
+  static const appBarTransparent = Colors.transparent;
 }
