@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nees_weather/commons/app_colors.dart';
 import 'package:nees_weather/data/city_weather_model.dart';
+import 'package:nees_weather/helpers/functions.dart';
 
 class AppBarWidget extends StatelessWidget {
   final Results values;
@@ -19,7 +19,7 @@ class AppBarWidget extends StatelessWidget {
       leading: const Icon(Icons.location_on_outlined),
       title: DropdownButtonHideUnderline(
         child: DropdownButton(
-          dropdownColor: _backgroundColorSelector(values),
+          dropdownColor: Functions.dropDownBackgroundColor(values),
           iconEnabledColor: Colors.white,
           items: [
             DropdownMenuItem(
@@ -50,13 +50,5 @@ class AppBarWidget extends StatelessWidget {
         ),
       ],
     );
-  }
-
-  Color _backgroundColorSelector(Results value) {
-    if (value.currently == 'dia') {
-      return AppColors.dropdownButtonLight;
-    } else {
-      return AppColors.backgroundDarkBlue;
-    }
   }
 }
