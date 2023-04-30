@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nees_weather/screens/error_screen.dart';
 import 'package:nees_weather/screens/home_screen.dart';
 
 void main() {
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomeScreen(),
+        '/errorScreen': (context) => const ErrorScreen(),
       },
     );
   }
