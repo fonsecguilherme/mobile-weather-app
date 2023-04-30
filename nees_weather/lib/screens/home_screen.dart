@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nees_weather/commons/app_colors.dart';
 import 'package:nees_weather/data/city_weather_model.dart';
 import 'package:nees_weather/data/weather_api_repository.dart';
+import 'package:nees_weather/helpers/functions.dart';
 import 'package:nees_weather/widgets/app_bar.dart';
 import 'package:nees_weather/widgets/next_forecast_widget.dart';
 import 'package:nees_weather/widgets/small_info_widget.dart';
@@ -47,7 +47,7 @@ class _HomeScreene extends State<HomeScreen> {
   Widget _body(AsyncSnapshot<CityWeatherModel> snapshot) {
     Results value = snapshot.data!.results;
     return Scaffold(
-      backgroundColor: _backgroundColorSelector(value),
+      backgroundColor: Functions.backgroundColorSelector(value),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: AppBarWidget(values: value),
@@ -64,13 +64,5 @@ class _HomeScreene extends State<HomeScreen> {
         ],
       ),
     );
-  }
-
-  Color _backgroundColorSelector(Results value) {
-    if (value.currently == 'dia') {
-      return AppColors.backgroundBlue;
-    } else {
-      return AppColors.backgroundDarkBlue;
-    }
   }
 }
