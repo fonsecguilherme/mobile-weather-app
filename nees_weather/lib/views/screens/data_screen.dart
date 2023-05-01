@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:nees_weather/data/city_weather_model.dart';
 import 'package:nees_weather/helpers/functions.dart';
-import 'package:nees_weather/widgets/app_bar.dart';
-import 'package:nees_weather/widgets/next_forecast_widget.dart';
-import 'package:nees_weather/widgets/small_info_widget.dart';
-import 'package:nees_weather/widgets/today_info_widget.dart';
-import 'package:nees_weather/widgets/weather_summary_widget.dart';
+import 'package:nees_weather/views/widgets/app_bar.dart';
+import 'package:nees_weather/views/widgets/next_forecast_widget.dart';
+import 'package:nees_weather/views/widgets/small_info_widget.dart';
+import 'package:nees_weather/views/widgets/today_info_widget.dart';
+import 'package:nees_weather/views/widgets/weather_summary_widget.dart';
 
 class DataScreen extends StatelessWidget {
   final AsyncSnapshot<CityWeatherModel> snapshot;
