@@ -27,7 +27,7 @@ class _HomeScreene extends State<HomeScreen> {
           future: getCitytWeather(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              return DataScreen(snapshot: snapshot); //_body(snapshot);
+              return DataScreen(snapshot: snapshot);
             } else if (snapshot.hasError) {
               return const ErrorScreen();
             } else {
