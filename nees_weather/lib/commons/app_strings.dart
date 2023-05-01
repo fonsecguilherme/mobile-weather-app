@@ -7,6 +7,7 @@ class AppStrings {
   static const String windDirection = 'Direção do vento';
   static const String errorMessage =
       'Ops!\nParece que ouve um erro. Recarregue a página.';
+  static const String loadingScreenMessage = 'Carregando dados...';
   static const String north = 'Norte';
   static const String south = 'Sul';
   static const String east = 'Leste';
