@@ -1,5 +1,5 @@
-import 'package:nees_weather/data/city_weather_model.dart';
 import 'package:http/http.dart' as http;
+import 'package:nees_weather/data/city_weather_model.dart';
 
 Future<CityWeatherModel> getWeather() async {
   const String url = 'https://api.hgbrasil.com/weather';
@@ -10,6 +10,5 @@ Future<CityWeatherModel> getWeather() async {
     return CityWeatherModel.fromJson(response.body);
   } else {
     throw Exception();
-    //! criar excessão personalizada!!
   }
 }
