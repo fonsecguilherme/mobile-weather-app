@@ -30,6 +30,14 @@ Projeto feito para o cardo de Dev Jr mobile do time do NEES.
   <img src="https://github.com/fonsecguilherme/mobile-weather-app/blob/main/nees_weather/screenshots/errorSC.png" width="350" />
 </p>
 
+* Gifs
+ 
+ <p float="left">
+  <img src="https://github.com/fonsecguilherme/mobile-weather-app/blob/main/nees_weather/screenshots/gif01.gif" width="350" />
+  <img src="https://github.com/fonsecguilherme/mobile-weather-app/blob/main/nees_weather/screenshots/gif02.gif" width="350" />
+</p>
+
+
 ## Melhorias
 
 Algumas melhorias que eu poderia sugerir seria que o projeto do Figma pudesse ser mais acessível. Por exemplo, poderíamos ter um ícone representando o horário da noite, a fonte é exclusiva do sistema MacOS, não consegui ver como utilizar dentro do projeto Flutter, além disso, o tamanho das fontes também não consegui ter acesso. Além disso a API faltou alguns dados como previsão hora a hora e por isso modifiquei o widget e coloquei informações disponibilizadas como nascer/pôr do sol, direção do vento e a hora da última atualização das informações no app.
