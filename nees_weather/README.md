@@ -43,6 +43,15 @@ Além disso, a construção do projeto foi muito boa de se fazer. Os componentes
 
 
 ## Organização
+Separei o programa nas seguintes pastas.
+
+* Commons: Tem as strings que não mudam dentro do app e também o arquivo de cores que são usadas nas fontes, background e etc
+
+* Data: Como o app possui apenas um modelo, deixei tanto o arquivo com a chamada de API quanto o Model dentro dessa pasta, porém se tivessem mais chamadas e arquivos eu dividiria os arquivos em controllers e models para que a organização ficasse melhor.
+
+* Helpers: Nessa pasta eu deixei funções que são usadas dentro do app, como TextStyle, conversão de datas e a conversão dos graus da posição de onde o vento está soprando para uma string com o nome da direção em si.
+
+* Views: No arquivo views estão as pastas Widgets e Screens. Em screens são as telas em si que o app possui e na pasta widgets estão widgets menores da que poderiam ser re-aproveitados dentro do app caso necessário
 ## Instalação
 
 O projeto pode ser executado fazendo o clone do projeto utilizando o comando:
