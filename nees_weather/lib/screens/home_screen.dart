@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:nees_weather/data/city_weather_model.dart';
 import 'package:nees_weather/data/weather_api_repository.dart';
-import 'package:nees_weather/helpers/functions.dart';
+import 'package:nees_weather/screens/data_screen.dart';
 import 'package:nees_weather/screens/error_screen.dart';
-import 'package:nees_weather/widgets/app_bar.dart';
-import 'package:nees_weather/widgets/next_forecast_widget.dart';
-import 'package:nees_weather/widgets/small_info_widget.dart';
-import 'package:nees_weather/widgets/today_info_widget.dart';
-import 'package:nees_weather/widgets/weather_summary_widget.dart';
+import 'package:nees_weather/screens/loading_screen.dart';
 
-class HomeScreen extends StatefulWidget with PreferredSizeWidget {
+class HomeScreen extends StatefulWidget {
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
-
   const HomeScreen({super.key});
 
   @override
@@ -33,35 +27,13 @@ class _HomeScreene extends State<HomeScreen> {
           future: getCitytWeather(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              return _body(snapshot);
+              return DataScreen(snapshot: snapshot); //_body(snapshot);
             } else if (snapshot.hasError) {
               return const ErrorScreen();
             } else {
-              return const CircularProgressIndicator();
+              return const LoadingScreen();
             }
           },
         ),
       );
-
-  Widget _body(AsyncSnapshot<CityWeatherModel> snapshot) {
-    Results value = snapshot.data!.results;
-    return Scaffold(
-      backgroundColor: Functions.backgroundColorSelector(value),
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: AppBarWidget(values: value),
-      ),
-      body: ListView(
-        children: [
-          WeatherSummaryWidget(
-              forecast: snapshot.data!.results.forecast, value: value),
-          SmallInfoWidget(
-            value: value,
-          ),
-          TodayInfoWidget(value: value),
-          NextForecastWidget(forecast: snapshot.data!.results.forecast),
-        ],
-      ),
-    );
-  }
 }
